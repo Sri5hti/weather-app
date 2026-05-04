@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: rgb(123, 170, 212);
+}
+h1 {
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+/* Input Styles */
+@media (max-width: 600px) {
+  .result {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Base card */
+.card {
+  padding: 20px;
+  width: 160px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* 🌍 City - Dark Blue */
+.city-card {
+  background-color: #0b1f3a;
+}
+
+/* 🌡 Temperature - Pastel Blue */
+.temp-card {
+  background-color: #a8d8ff;
+  color: #0b1f3a;
+}
+
+/* 🌤 Condition - Yellow */
+.condition-card {
+  background-color: #ffd84d;
+  color: #333;
+}
+.hourly-container {
+  margin-top: 40px;
+}
+
+.hourly {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.hour-card {
+  min-width: 100px;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.hour-card:hover {
+  transform: scale(1.05);
+}
+
+.hour-card img {
+  width: 50px;
+}
